@@ -1,0 +1,88 @@
+<div class="container login-page">
+  <button class="btn btn-outline-primary login-button">Login</button>
+</div>
+<div class="container index-page">
+  <div class="row">
+    <div class="col-md-3">
+      <label for="username"> Username </label>
+    </div>
+      <div class="col-md-6">
+        <input class="form-control username" id="username">
+      </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <label for="send-tweet"> Send Tweet </label>
+    </div>
+    <div class="col-md-6">
+      <input class="form-control send-tweet" id="send-tweet">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <label for="subscribe-username"> Enter user to subscribe </label>
+      </div>
+      <div class="col-md-6">
+        <input class="form-control subscribe-username" id="subscribe-username">
+      </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <label for="search-hashtag"> Search Hashtag </label>
+      </div>
+      <div class="col-md-6">
+        <input class="form-control search-hashtag" id="search-hashtag">
+      </div>
+      
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <button class="btn btn-outline-primary get-feed" id="get-feed">Get Feed</button>
+      </div>
+    <div class="col-md-3">
+      <button class="btn btn-outline-primary search-mentions"> Search your mentions </button>
+    </div>
+    <div class="col-md-3">
+      <button class="btn btn-outline-primary clear-screen"> Clear Screen </button>
+    </div>
+  </div>
+  <div class="row logout-view">
+     <div class="col-md-3">
+      <button class="btn btn-outline-primary logout"> Logout </button>
+    </div>
+  </div>
+
+</div>
+<div class="container messages-view" id="messages">
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function(){
+    $(".index-page").hide();
+  $(".login-page").show();
+  $(".logout-view").hide();
+  $(".messages-view").hide();
+
+  $(".login-button").click(function() {
+    $(".login-page").hide();
+    $(".index-page").show();
+    $(".logout-view").show();
+    $(".messages-view").show();
+  });
+
+  $(".logout").click(function(){
+    $(".index-page").hide();
+    $(".messages-view").hide();
+    $(".login-page").show();
+  })
+
+  });
+  
+</script>
